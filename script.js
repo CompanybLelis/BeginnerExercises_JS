@@ -154,3 +154,32 @@
   // }
 
 //#endregion
+
+//#region Média Alunos
+
+  const students=[
+    {
+      name: "Bruno",
+      test1: 10,
+      test2: 9.5
+    },
+    {
+      name: "Granja",
+      test1: 8.5,
+      test2: 5.75
+    },
+    {
+      name: "Lelis",
+      test1: 6,
+      test2: 4.5
+    }
+  ]
+
+  students.forEach(studant => {
+    let sum = ((studant.test1 + studant.test2) / 2).toFixed(2)
+    if(sum < 6) phrase = `Não foi dessa vez, ${studant.name}! Tente novamente!`
+    else phrase = `Parabéns, ${studant.name}! Você foi aprovado(a) no curso!`
+    alert(`A média do(a) aluno(a) ${studant.name} é: ${sum}\n${phrase}`)
+  });
+
+//#endregion
